@@ -30,7 +30,7 @@ $(error CPU must be k8, armv7a, aarch64, or darwin)
 endif
 
 # Allowed COMPILATION_MODE values: opt, dbg, fastbuild
-COMPILATION_MODE ?= opt
+COMPILATION_MODE ?= dbg
 ifeq ($(filter $(COMPILATION_MODE),opt dbg fastbuild),)
 $(error COMPILATION_MODE must be opt, dbg or fastbuild)
 endif
