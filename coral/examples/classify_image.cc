@@ -3,6 +3,7 @@
 // RGB pixel array.
 // In linux, you may resize and convert an existing image to pixel array like:
 //   convert cat.bmp -resize 224x224! cat.rgb
+// On macOS, install convert via "brew install imagemagick"
 #include <iostream>
 #include <string>
 
@@ -16,7 +17,7 @@
 
 ABSL_FLAG(std::string, model_path, "mobilenet_v1_1.0_224_quant_edgetpu.tflite",
           "Path to the tflite model.");
-ABSL_FLAG(std::string, image_path, "cat.rgb",
+ABSL_FLAG(std::string, image_path, "bird.rgb",
           "Path to the image to be classified. The input image size must match "
           "the input size of the model and the image must be stored as RGB "
           "pixel array.");
