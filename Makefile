@@ -52,7 +52,7 @@ COMMON_BAZEL_BUILD_FLAGS := --compilation_mode=$(COMPILATION_MODE) \
                             $(COMMON_BAZEL_BUILD_FLAGS_$(OS))
 
 BAZEL_BUILD_FLAGS_Linux := --linkopt=-l:libusb-1.0.so
-BAZEL_BUILD_FLAGS_Darwin := --linkopt=-L/opt/local/lib \
+BAZEL_BUILD_FLAGS_Darwin := --linkopt=-L/usr/local/lib \
                             --linkopt=-lusb-1.0
 
 ifeq ($(COMPILATION_MODE), opt)
