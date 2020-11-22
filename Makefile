@@ -43,6 +43,7 @@ COMMON_BAZEL_BUILD_FLAGS := --compilation_mode=$(COMPILATION_MODE) \
                             --copt=-DNPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION \
                             --verbose_failures \
                             --sandbox_debug \
+														--spawn_strategy=local \
                             --subcommands \
                             --define PY3_VER=$(PY3_VER) \
                             --action_env PYTHON_BIN_PATH=$(shell which $(PYTHON3)) \
